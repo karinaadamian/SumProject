@@ -1,0 +1,513 @@
+Microsoft Windows [Version 10.0.17134.590]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\ хантон “зинчеренко>git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\ хантон “зинчеренко>git clone
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+
+
+C:\Users\ хантон “зинчеренко>git clone https://github.com/udacity/asteroids.git
+Cloning into 'asteroids'...
+remote: Enumerating objects: 209, done.
+remote: Total 209 (delta 0), reused 0 (delta 0), pack-reused 209R
+Receiving objects: 100% (209/209), 191.54 KiB | 218.00 KiB/s, done.
+Resolving deltas:  50% (64/127)
+Resolving deltas: 100% (127/127), done.
+
+C:\Users\ хантон “зинчеренко>dir
+ Volume in drive C has no label.
+ Volume Serial Number is F47D-5289
+
+ Directory of C:\Users\ хантон “зинчеренко
+
+02/23/2019  12:45 PM    <DIR>          .
+02/23/2019  12:45 PM    <DIR>          ..
+08/12/2018  02:10 PM    <DIR>          .android
+02/16/2019  02:44 PM               437 .bash_history
+02/22/2019  10:49 PM               148 .gitconfig
+01/15/2019  08:51 PM    <DIR>          .idlerc
+10/24/2018  09:24 AM    <DIR>          .thumbnails
+02/16/2019  03:50 PM    <DIR>          .VirtualBox
+12/13/2018  05:41 PM    <DIR>          3D Objects
+02/23/2019  12:45 PM    <DIR>          asteroids
+12/13/2018  05:41 PM    <DIR>          Contacts
+01/15/2019  08:51 PM    <DIR>          Desktop
+02/23/2019  09:29 AM    <DIR>          Documents
+02/23/2019  12:08 PM    <DIR>          Downloads
+12/13/2018  05:41 PM    <DIR>          Favorites
+02/16/2019  02:30 PM                 0 git
+12/13/2018  05:41 PM    <DIR>          Links
+12/13/2018  05:41 PM    <DIR>          Music
+02/01/2019  08:15 PM    <DIR>          OneDrive
+02/12/2019  09:56 PM    <DIR>          Pictures
+12/13/2018  05:41 PM    <DIR>          Saved Games
+12/13/2018  05:41 PM    <DIR>          Searches
+12/13/2018  05:41 PM    <DIR>          Videos
+02/16/2019  01:35 PM    <DIR>          VirtualBox VMs
+               3 File(s)            585 bytes
+              21 Dir(s)  343,619,751,936 bytes free
+
+C:\Users\ хантон “зинчеренко>cd asteroids
+
+C:\Users\ хантон “зинчеренко\asteroids>git log
+commit 3884eab839af1e82c44267484cf2945a766081f3 (HEAD -> master, origin/master, origin/HEAD)
+Author: cbuckey <caroline@udacity.com>
+Date:   Fri Apr 29 12:33:05 2011 -0700
+
+    Add color
+
+commit 3e42136a76cf78c6c421cd720427bf6337c2d623
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Tue Mar 15 22:34:49 2011 -0700
+
+    now using requestAnimationFrame
+
+    see this for more info:
+    http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+
+commit 4035769377cce96a88d5c1167079e12f30492391
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Wed Jun 9 21:04:32 2010 -0700
+
+    frame interval was set wrong after game was paused
+
+commit 25ede836903881848fea811df5b687b59d962da3
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Wed May 26 23:52:00 2010 -0700
+
+    a couple missing ends with the ipad version
+
+commit df035382c41b4d0cda86a1aa30b53f15bef05b53
+Author: Doug McInnes <doug@dougmcinnes.com>
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout 25ede836903881848fea811df5b687b59d962da3
+Note: checking out '25ede836903881848fea811df5b687b59d962da3'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 25ede83 a couple missing ends with the ipad version
+
+C:\Users\ хантон “зинчеренко\asteroids>git diff df035382c41b4d0cda86a1aa30b53f15bef05b53
+diff --git a/game.js b/game.js
+index 8b87936..5daadb0 100644
+--- a/game.js
++++ b/game.js
+@@ -408,7 +408,6 @@ Ship = function () {
+     }
+     if (KEY_STATUS.space) {
+       if (this.delayBeforeBullet <= 0) {
+-        this.delayBeforeBullet = 10;
+         for (var i = 0; i < this.bullets.length; i++) {
+           if (!this.bullets[i].visible) {
+             SFX.laser();
+@@ -917,7 +916,7 @@ Game = {
+       this.state = 'waiting';
+     },
+     waiting: function () {
+-      Text.renderText(ipad ? 'Touch Screen to Start' : 'Press Space to Start', 36, Game.canvasWidth/2 - 270, Game.canvasHeight/2);
++      Text.renderText(window.ipad ? 'Touch Screen to Start' : 'Press Space to Start', 36, Game.canvasWidth/2 - 270, Game.canvasHeight/2);
+       if (KEY_STATUS.space || window.gameStart) {
+         KEY_STATUS.space = false; // hack so we don't shoot right away
+         window.gameStart = false;
+diff --git a/index.html b/index.html
+index 3d6e6f4..8aa618d 100644
+--- a/index.html
++++ b/index.html
+@@ -6,7 +6,6 @@
+     <script src="game.js"></script>
+
+C:\Users\ хантон “зинчеренко\asteroids>git diff
+diff --git a/game.js b/game.js
+index 5daadb0..8a552cc 100644
+--- a/game.js
++++ b/game.js
+@@ -408,6 +408,7 @@ Ship = function () {
+     }
+     if (KEY_STATUS.space) {
+       if (this.delayBeforeBullet <= 0) {
++                 this.delayBeforeBullet = 10;
+         for (var i = 0; i < this.bullets.length; i++) {
+           if (!this.bullets[i].visible) {
+             SFX.laser();
+diff --git a/index.html b/index.html
+index 8aa618d..bc32244 100644
+--- a/index.html
++++ b/index.html
+@@ -17,7 +17,7 @@
+   </head>
+   <body>
+     <div id="game-container">
+-      <canvas id="canvas" width="780" height="540"></canvas>
++      <canvas id="canvas" width="60" height="540"></canvas>
+       <div id="left-controls">
+         <div id="up" class='button'>THRUST</div>
+         <div id="left" class='button'>LEFT</div>
+
+C:\Users\ хантон “зинчеренко\asteroids>git add game.js
+
+C:\Users\ хантон “зинчеренко\asteroids>git diff --staged
+diff --git a/game.js b/game.js
+index 5daadb0..8a552cc 100644
+--- a/game.js
++++ b/game.js
+@@ -408,6 +408,7 @@ Ship = function () {
+     }
+     if (KEY_STATUS.space) {
+       if (this.delayBeforeBullet <= 0) {
++                 this.delayBeforeBullet = 10;
+         for (var i = 0; i < this.bullets.length; i++) {
+           if (!this.bullets[i].visible) {
+             SFX.laser();
+
+C:\Users\ хантон “зинчеренко\asteroids>git commit
+[detached HEAD 88d8f29] Add delay to the Bullets
+ 1 file changed, 1 insertion(+)
+
+C:\Users\ хантон “зинчеренко\asteroids>git diff
+diff --git a/index.html b/index.html
+index 8aa618d..bc32244 100644
+--- a/index.html
++++ b/index.html
+@@ -17,7 +17,7 @@
+   </head>
+   <body>
+     <div id="game-container">
+-      <canvas id="canvas" width="780" height="540"></canvas>
++      <canvas id="canvas" width="60" height="540"></canvas>
+       <div id="left-controls">
+         <div id="up" class='button'>THRUST</div>
+         <div id="left" class='button'>LEFT</div>
+
+C:\Users\ хантон “зинчеренко\asteroids>git diff --staged
+
+C:\Users\ хантон “зинчеренко\asteroids>git reser --hard
+git: 'reser' is not a git command. See 'git --help'.
+
+The most similar command is
+        reset
+
+C:\Users\ хантон “зинчеренко\asteroids>git reset --hard
+HEAD is now at 88d8f29 Add delay to the Bullets
+
+C:\Users\ хантон “зинчеренко\asteroids>git diff
+
+C:\Users\ хантон “зинчеренко\asteroids>git branch
+* (HEAD detached from 25ede83)
+  master
+
+C:\Users\ хантон “зинчеренко\asteroids>git branch easy-mode
+
+C:\Users\ хантон “зинчеренко\asteroids>git branch
+* (HEAD detached from 25ede83)
+  easy-mode
+  master
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout easy-mode
+Switched to branch 'easy-mode'
+
+C:\Users\ хантон “зинчеренко\asteroids>git branch
+* easy-mode
+  master
+
+C:\Users\ хантон “зинчеренко\asteroids>git add game.js
+
+C:\Users\ хантон “зинчеренко\asteroids>git commit
+[easy-mode 3f5beaf] 2 fragments
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout coins
+Switched to a new branch 'coins'
+Branch 'coins' set up to track remote branch 'coins' from 'origin'.
+
+C:\Users\ хантон “зинчеренко\asteroids>git log
+commit 354dfdd530b1631a2834b2e9e242d31e625c9c13 (HEAD -> coins, origin/coins)
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Tue Jun 1 13:06:52 2010 -0700
+
+    Make ships able to spawn on coins
+
+commit 0c6daf150d6dedb73e60966d853c699a42b3169d
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Tue Jun 1 11:30:37 2010 -0700
+
+    Make it possible to collect coins
+
+commit a3c0ae46a65126fc8db756960a1b9511942600d8
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Fri May 28 20:05:14 2010 -0700
+
+    Create helper functions
+
+commit 656b02e2f7bf1bc34a7848143a175872c1f1ad30
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Tue May 25 10:14:53 2010 -0700
+
+    First pass at adding coins
+
+commit b0678b161fcf74467ed3a63110557e3d6229cfa6
+Author: cbuckey <caroline@udacity.com>
+Date:   Mon May 24 04:15:21 2010 -0700
+
+    Revert controls
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\ хантон “зинчеренко\asteroids>git log
+commit 3884eab839af1e82c44267484cf2945a766081f3 (HEAD -> master, origin/master, origin/HEAD)
+Author: cbuckey <caroline@udacity.com>
+Date:   Fri Apr 29 12:33:05 2011 -0700
+
+    Add color
+
+commit 3e42136a76cf78c6c421cd720427bf6337c2d623
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Tue Mar 15 22:34:49 2011 -0700
+
+    now using requestAnimationFrame
+
+    see this for more info:
+    http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+
+commit 4035769377cce96a88d5c1167079e12f30492391
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Wed Jun 9 21:04:32 2010 -0700
+
+    frame interval was set wrong after game was paused
+
+commit 25ede836903881848fea811df5b687b59d962da3
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Wed May 26 23:52:00 2010 -0700
+
+    a couple missing ends with the ipad version
+
+commit df035382c41b4d0cda86a1aa30b53f15bef05b53
+Author: Doug McInnes <doug@dougmcinnes.com>
+
+C:\Users\ хантон “зинчеренко\asteroids> git log --graph --oneline master coins
+* 3884eab (HEAD -> master, origin/master, origin/HEAD) Add color
+* 3e42136 now using requestAnimationFrame
+* 4035769 frame interval was set wrong after game was paused
+* 25ede83 a couple missing ends with the ipad version
+* df03538 I can't spell 'screen' apparently :)
+| * 354dfdd (origin/coins, coins) Make ships able to spawn on coins
+| * 0c6daf1 Make it possible to collect coins
+| * a3c0ae4 Create helper functions
+| * 656b02e First pass at adding coins
+|/
+* b0678b1 Revert controls
+* f19cb1b Fix typo in space
+* 75928a9 Use space for movement and enter for shooting
+* ac83b72 mostly finished ipad version
+* 7ca4826 trying to get div touch controls to work
+* 3cb406e first pass at ipad controls
+* fe7993e now capturing down key so people don't accidently scroll the page
+* 343935f added license
+* 80f3bc7 increased canvas size
+* 7dc3de0 made the framerate counter dumb but more accurate
+* f077ea3 added pointInPolygon method for moz
+* 5cb7bed added reverseTransform method
+* a53b00a trying to get ff collision detection working
+* 1e47136 matrix really only needs to be a 2x3
+* 186453f small changes
+* c0b670e you get 200 Quatloos for shooting a big flying saucer
+* c808f10 bigalien now crosses and disappears
+* c588345 move lives out of Ship
+* 4bb6bf0 whole lot of refactoring
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout easy-mode
+Switched to branch 'easy-mode'
+
+C:\Users\ хантон “зинчеренко\asteroids>git merge master easy-mode
+Auto-merging game.js
+Merge made by the 'recursive' strategy.
+ game.js | 52 +++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 45 insertions(+), 7 deletions(-)
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout easy-mode
+Already on 'easy-mode'
+M       game.js
+
+C:\Users\ хантон “зинчеренко\asteroids>git log
+commit f02c3699692e2c2f4cc6e69b32347ec5c0bf2532 (HEAD -> easy-mode)
+Merge: 3f5beaf 3884eab
+Author: unknown <goncharekoai5@gmail.com>
+Date:   Sat Feb 23 12:56:10 2019 +0300
+
+    Merge branch 'master' into easy-mode
+
+commit 3f5beaf665020cc19afa045c0aba5d7369f2da9d
+Author: unknown <goncharekoai5@gmail.com>
+Date:   Sat Feb 23 12:53:28 2019 +0300
+
+    2 fragments
+
+commit 88d8f2910ac152ec0ff2edc228a0c1bace3536c4
+Author: unknown <goncharekoai5@gmail.com>
+Date:   Sat Feb 23 12:48:52 2019 +0300
+
+    Add delay to the Bullets
+
+commit 3884eab839af1e82c44267484cf2945a766081f3 (origin/master, origin/HEAD, master)
+Author: cbuckey <caroline@udacity.com>
+Date:   Fri Apr 29 12:33:05 2011 -0700
+
+    Add color
+
+commit 3e42136a76cf78c6c421cd720427bf6337c2d623
+Author: Doug McInnes <doug@dougmcinnes.com>
+Date:   Tue Mar 15 22:34:49 2011 -0700
+
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout coins
+error: Your local changes to the following files would be overwritten by checkout:
+        game.js
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\ хантон “зинчеренко\asteroids>git branch coins
+fatal: A branch named 'coins' already exists.
+
+C:\Users\ хантон “зинчеренко\asteroids>git commit
+On branch easy-mode
+Changes not staged for commit:
+        modified:   game.js
+
+no changes added to commit
+
+C:\Users\ хантон “зинчеренко\asteroids>git add game.js
+
+C:\Users\ хантон “зинчеренко\asteroids>git commit
+[easy-mode aa9539d] 3 fragments
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\ хантон “зинчеренко\asteroids>git checkout coins
+Switched to branch 'coins'
+Your branch is up to date with 'origin/coins'.
+
+C:\Users\ хантон “зинчеренко\asteroids>git log
+commit 354dfdd530b1631a2834b2e9e242d31e625c9c13 (HEAD -> coins, origin/coins)
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Tue Jun 1 13:06:52 2010 -0700
+
+    Make ships able to spawn on coins
+
+commit 0c6daf150d6dedb73e60966d853c699a42b3169d
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Tue Jun 1 11:30:37 2010 -0700
+
+    Make it possible to collect coins
+
+commit a3c0ae46a65126fc8db756960a1b9511942600d8
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Fri May 28 20:05:14 2010 -0700
+
+    Create helper functions
+
+commit 656b02e2f7bf1bc34a7848143a175872c1f1ad30
+Author: Sarah Spikes <sarah@udacity.com>
+Date:   Tue May 25 10:14:53 2010 -0700
+
+    First pass at adding coins
+
+commit b0678b161fcf74467ed3a63110557e3d6229cfa6
+Author: cbuckey <caroline@udacity.com>
+Date:   Mon May 24 04:15:21 2010 -0700
+
+    Revert controls
+
+C:\Users\ хантон “зинчеренко\asteroids>
+
+C:\Users\ хантон “зинчеренко\asteroids>
